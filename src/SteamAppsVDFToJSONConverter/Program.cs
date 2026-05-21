@@ -1,6 +1,7 @@
 ﻿using Gameloop.Vdf;
 using Gameloop.Vdf.Linq;
 using SteamAppsVDFToJSONConverter.Models;
+using SteamAppsVDFToJSONConverter.Serialization;
 using System.Text;
 using System.Text.Encodings.Web;
 using System.Text.Json;
@@ -63,6 +64,7 @@ namespace SteamAppsVDFToJSONConverter
             {
                 WriteIndented = true,
                 Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
+                TypeInfoResolver = JsonContext.Default
             });
 
             var currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
