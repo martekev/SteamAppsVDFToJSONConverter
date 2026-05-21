@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/01 - Build/">
+    <File Path="Directory.Build.props" />
+  </Folder>
+  <Folder Name="/02 - Documentation/">
+    <File Path="../README.fr.md" />
+    <File Path="../README.md" />
+  </Folder>
+  <Folder Name="/03 - Applications/">
+    <Project Path="SteamAppsVDFToJSONConverter/SteamAppsVDFToJSONConverter.csproj" />
+  </Folder>
+</Solution>
