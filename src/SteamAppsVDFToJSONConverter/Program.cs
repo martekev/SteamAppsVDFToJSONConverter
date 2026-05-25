@@ -14,7 +14,12 @@ namespace SteamAppsVDFToJSONConverter
         {
             string filePath = args[0];
 
-            var root = VdfConvert.Deserialize(File.ReadAllText(filePath));
+            var text = File.ReadAllText(filePath);
+            var root = VdfConvert.Deserialize(text, new VdfSerializerSettings
+            {
+                MaximumTokenSize = 65536,
+                UsesEscapeSequences = true
+            });
 
             var key = root.Key;
 
